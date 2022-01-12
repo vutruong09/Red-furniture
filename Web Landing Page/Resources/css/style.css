@@ -1,0 +1,440 @@
+/*--------------------------DEFAULT SETUP-----------------------------*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'lato', sans-serif;
+    font-size: 20px; /*mac dinh la 16px*/
+    color: #5a5a5a;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+}
+
+/*---------------------------Reusable component---------------------------------------*/
+
+.btn{
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0 5px;
+    width: 190px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s;
+}
+.btn:hover,
+.btn:active{
+    background-color: #1898e2;
+}
+
+.clearfix::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.row{
+    max-width: 1141px;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 300%;
+    font-weight: 400;    
+    word-spacing: 5px;
+    color: rgb(44, 129, 207);
+    line-height: 135%;
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #e67e22;
+    font-size: 180%;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2::after{
+    content: " ";
+    display: block;
+    width: 150px;
+    height: 3px;
+    background-color: orange;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+h1, h2,h3{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #265077;
+    color: white;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.p-long{
+    text-align: center;
+    font-size: 22px;
+    color: darkslategray;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 70%;
+    margin-left: 15%;
+    line-height: 140%;
+    
+}
+
+section{
+    padding: 50px;
+}
+
+.small-icon{
+    color: red;
+    font-size: 130%;
+    margin-right: 10px;
+}
+
+/*---------------------------HEADER----------------------------------*/
+
+header{
+    background-image: linear-gradient(to right top, rgb(0,0,0,0.1) 55%, rgb(128,128,128,0.3)), url('../image/Bg-theme.jpg');
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    /*view height, 100% bao phu toan man hinh*/ 
+    background-attachment: fixed;
+}
+
+.logo{
+    width: 150px;
+    float: left;
+    margin-left: 1px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none; /*khong con dau gach ngang*/
+    margin-right: 50px;
+    margin-top: 55px;
+}
+
+.main-nav li a {
+    text-decoration: none; /*khong con dau gach chan*/
+    color: rgb(44, 129, 207);
+    font-size: 110%;
+    font-weight: 700;
+    transition: border-bottom 0.5s;
+    padding: 3px 0;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.main-nav li a:hover, /*di chuot qua lai*/
+.main-nav li a:active{ /*click chuot*/
+    border-bottom: 2px solid rgb(47, 13, 172);
+}
+
+.heading-main-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -55%);
+    width: 1140px;
+}
+
+/*-----------------------------About section--------------------------------*/
+
+.about-picture{
+    position: relative;
+    margin-top: 50px;
+}
+
+.about-picture img{
+    width: 90%;
+    border-radius: 20px;
+    border: 4px solid #c2e1fd;
+    box-shadow: 0px 5px 15px 5px #265077;
+    /*x-y-độ mờ-độ phóng rộng màu*/
+/*    filter: brightness(55%) blur(2px);*/
+    transition: all 0.7s;
+}
+
+.picture-tittle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: orangered;
+    transform: translate(-65%, 100%);
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.about-picture:hover img,
+.about-picture:active imp{
+    filter: brightness(55%) blur(2px);
+}
+
+.about-picture:hover .picture-tittle,
+.about-picture:active .picture-tittle{
+    transform: translate(-65% , -50%);
+    opacity: 1;
+}
+
+/*----------------------Product-section--------------------------------------*/
+
+.products-section{
+    background-color: #f4f4f4;
+}
+
+.product-section h2{
+    margin-bottom: 60px;
+}
+
+.product-box{
+    background-color: #eeefff;
+    box-shadow: 3px 5px 10px #e0e0e0;
+    width: 90%;
+    height: 300px;
+}
+
+.product-price{
+    color: #265077;
+    font-size: 250%;
+    text-align: center;
+}
+
+.product-price span{
+    font-size: 80%; 
+}
+
+.product-box ul li{
+    margin-left: 20%;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product-box .btn{
+    margin-left: 20%;
+}
+
+/**********************Testimonial section*****************************/
+
+.testimonials-section{
+    background-image: linear-gradient(to right top, rgb(0,0,0,0.1) 55%, rgb(128,128,128,0.3)), url('../image/Bg-testimonial.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.testimonials-section h2{
+    margin-bottom: 70px;
+}
+
+blockquote{
+    width: 95%;
+    position: relative;
+    font-style: italic;
+    line-height: 140%;
+    color: white;
+}
+
+blockquote:before{
+    content: '\201C';
+    display: block;
+    font-size: 400%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+cite{
+    display: block;
+    color: #6b95bd;
+    margin-top: 25px;
+}
+
+cite img{
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #265077;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/************************SPONSOR SECTION*******************************/
+
+.sponsors-section{
+    background-color: #f4f4f4;
+}
+
+.sponsors-section h2{
+    margin-bottom: 50px;
+}
+
+.sponsors-showcase{
+    margin-left: 8%;
+    
+}
+
+.sponsors-showcase li{
+    list-style: none;
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-sponsor{
+    width: 140px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sponsors-showcase li .logo-sponsor:hover,
+.sponsors-showcase li .logo-sponsor:active{
+    transform: scale(1.2);
+}
+
+figcaption{
+    color: #265077;
+    font-weight: 900;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+/****************************CCONTACT FORM**********************************/
+
+.contact-section{
+    background-image:linear-gradient(to right top, rgb(0,0,0,0.1) 55%, rgb(128,128,128,0.3)), url(../image/lastTheme.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/****************************FOOTER***************************************/
+
+footer{
+    text-align: center;
+    background-color: #494949;
+    color: white;
+    padding: 20px;
+}
+
+.information{
+    list-style: none;
+    color: white;
+    line-height: 200%;
+    margin-top: 70px;
+    word-spacing: 1px;
+    font-size: 95%;
+}
+
+.information .small-icon:hover,
+.information .small-icon:active{
+    transform: scale(1.3);
+}
+
+.social-icons{
+    margin-top: 50px;
+    list-style: none;
+}
+
+.social-icons li{
+    display: inline-block;
+    font-size: 250%;
+    margin-left: 20px;
+    color: white;
+}
+
+.social-icons li i{
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.social-icons li i:hover,
+.social-icons li i:active{
+    transform: scale(1.3);
+    color: #e67e22;
+}
+
+/**************************FORM******************************/
+
+form{
+    background-color: rgba(0,0,0, .4);
+    margin-left: 40%;
+    width: 68%;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+form .row{
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: 150%;
+    color: white;
+}
+
+input, textarea{
+    outline: none;
+    padding: 10px;
+    background-color: rgba(48, 47,47, .3);
+    border: 1px solid rgba(70, 68, 68, .7);
+    margin-left: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+textarea{
+    resize: none;
+    height: 100px;
+}
+
+input{
+    height: 50px;
+}
+
+input[type=text], input[type=email], textarea{
+    width: 80%;
+    font-size: 100%;
+    transition: all .3s;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+    color: white;
+    background-color: rgba(48, 47, 47, .8);
+}
+
+form .row:last-child{ /*chon phan tu row cuoi cung cua form*/
+    text-align: center;
+}
+
+input[type=submit]{
+    font-weight: 700;
+    font-size: 100%;
+    border-radius: 5px;
+    width: 60%
+}
+    
+
+
+
