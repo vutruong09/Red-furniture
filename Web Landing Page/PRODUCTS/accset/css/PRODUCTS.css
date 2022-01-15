@@ -4,8 +4,36 @@
     box-sizing: border-box;
 }
 html{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'lato', sans-serif;
 }
+.force-overflow {
+    min-height: 300px;
+}
+section{
+    width: 100%;
+    position: relative;
+}
+section .section-icon{
+    position: fixed;
+    bottom: 15%;
+    right: 1%;
+    font-size: 300%;
+    color: #0279f7;
+}
+.section-icon .fa-phone{
+    margin-bottom: 52%;
+    color: #0258f7;
+}
+.section-icon .fa-facebook-messenger{
+    color: #0258f7;
+}
+.section-icon .fa-phone:hover,
+.section-icon .fa-facebook-messenger:hover{
+    transform: scale(1.5);
+    transition: all 0.3s;
+}
+
+
 header{
     width: 100%;
 }
@@ -52,8 +80,8 @@ header #header{
 }
 #header .heading-header{
     position: absolute;
-    top: 45%;
-    left: 40%;
+    top: 8%;
+    left: 50%;
 }
 #header .heading-header h1{ /**prob**/
     font-size: 400%;
@@ -61,12 +89,10 @@ header #header{
     word-spacing: 5px;
     color: rgb(44, 129, 207);
     line-height: 135%;
-    margin-top: -150px;
-    margin-bottom: 10px;
-    margin-left: -350px;
+    margin: -150px 0 50px -350px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'lato', sans-serif;
+    
     text-rendering: optimizeLegibility;
 }
 #header .heading-header a{
@@ -76,9 +102,7 @@ header #header{
     padding: 15px 30px;
     border-radius: 20px;
     text-align: center;
-    margin-top: 40px;
-    margin-left: -350px;
-    display: inline-block;
+    margin-left: -245px;
     transition: all 0.3s;
     width: 30%;
 }
@@ -96,8 +120,7 @@ article #content{
     margin: 0 auto;
 }
 #content .content{
-    margin: 68px 0;
-    box-shadow: 10px 10px 10px;
+    padding: 68px 0;
 }
 .content .heading-content h1{
     text-align: center;
@@ -115,6 +138,7 @@ article #content{
 }
 .content .content-product{
     max-height: 1200px;
+    box-shadow: 0px 0px 4px;
 }
 .content-product .heading-product{
     margin-top: 27px;
@@ -144,9 +168,6 @@ article #content{
 .product{
     overflow-y: scroll;
     max-height: 950px;
-    border-bottom: 2px solid #6c879a;
-    border-left: 2px solid #6c879a;
-    border-radius: 4px;
 }
 .product .product-x{
     display: flex;
@@ -157,7 +178,7 @@ article #content{
     margin-top: 10px;
 }
 .product-list .list-img img{
-    width: 357px;
+    width: 355px;
     height: 340px;
 }
 .product-list .list-text{
@@ -202,7 +223,7 @@ footer{
     padding: 7px 0;
     color: #fff;
     font-size: 19px;
-    font-family: 'lato', sans-serif;
+    
 }
 .footer-address i{
     color: red;
@@ -296,6 +317,27 @@ footer #footer-bottum{
     section{
         width: 100%;
     }
+    section .section-icon {
+        bottom: 11%;
+        font-size: 239%;
+    }
+    .section-icon{
+        font-size: 246%;
+    }
+    .section-icon .fa-phone{
+        margin-bottom: 45%
+    }
+    header #header {
+        background: url(../img/Background-header-electronics.png) center center/ cover no-repeat;
+        width: 100%;
+        height: 312px;
+        position: relative;
+    }
+    #header .heading-header {
+        position: absolute;
+        top: 106px;
+        left: 132px;
+    }
     .header_eletronics .header-logo img{
         width: 30px;
         height: 30px;
@@ -315,19 +357,22 @@ footer #footer-bottum{
         line-height: 19px;
     }
     #header .heading-header h1 {
-        font-size: 69%;
+        margin: 0;
+        font-size: 10px;
     }
     #header .heading-header a {
-        font-size: 42%;
+        font-size: 9px;
         padding: 5px 7px;
         margin-top: 7px;
+        margin-left: 19px;
     }
     article #content {
         width: 100%;
         margin: 0 auto;
     }
     #content .content {
-        box-shadow: 0px 10px 10px;
+        margin: 12px 23px;
+        padding: 15px 0;
     }
     .content .heading-content h1 {
         font-size: 22px;
@@ -366,6 +411,9 @@ footer #footer-bottum{
         width: 100%;
         height: 100%;
     }
+    footer {
+        height: 512px;
+    }
     #footer .footer-top {
         display: block;
     }
@@ -385,5 +433,8 @@ footer #footer-bottum{
     }
     .footer-font {
         margin: 0;
+    }
+    #footer-bottum p{
+        font-size: 9px;
     }
 }
