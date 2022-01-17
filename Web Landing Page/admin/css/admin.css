@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#admin{
+    position: relative;
+}
+.container-fluid .page-name {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 30px;
+    color: rgb(44, 129, 207);
+    text-decoration: none;
+}
+.list-header li a{
+    font-weight: 600;
+    font-size: 20px;
+    padding: 8px 0rem;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    background-color: #ddd;
+}
+.header-icon a{
+    position: relative;
+}
+.header-icon p{
+    position: absolute;
+    top: -6px;
+    right: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: red;
+    width: 17px;
+    height: 18px;
+    text-align: center;
+    border-radius: 50%;
+}
+.header-avarta img{
+    width: 40px;
+    border-radius: 50%;
+}
+.header-avarta img:hover{
+    border: 2px solid #ccc; 
+}
+.header-right .header-icon{
+    margin: 0 12px;
+    font-size: 20px;
+}
+.header-right .header-icon a{
+    text-decoration: none;
+    color: rgba(0,0,0,.55);
+}
+.header-icon .log-out{
+    margin: 8px 0 0 11px;
+}
+.header-icon .log-out:hover{
+    border-bottom:1px solid rgb(141 140 140) ;
+}
+/*  */
+.heading-section{
+    background-color: rgb(247, 247, 247);
+    min-width: 24%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.heading-section .header-icon{
+    font-size: 35px;
+    padding-top: 16px;
+    display: block;
+}
+.heading-section .heading-number{
+    margin-bottom: 0;
+}
+.heading-section p{
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+.heading-top{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.heading-top .heading-top-border{
+    margin: 0 auto;
+    width: 8%;
+    height: 1px;
+    background-color: red;
+}
+.heading-top h1{
+    font-size: 200%;
+    text-transform: uppercase;
+    margin: 40px 0 0 0;
+    font-weight: 900;
+    transition: all 0.3s;
+}
+.heading-top h1:hover{
+    transform: scale(1.2);
+}
+footer {
+    text-align: center;
+    background-color: #494949;
+    color: white;
+    padding: 15px;
+}
+footer p{
+    margin-bottom: 0;
+}
+@media (max-width: 991px){
+    .heading{
+        flex-wrap: unset !important;
+    }
+    .header-right .header-icon{
+        align-items: center;
+    }
+}
+
+
+

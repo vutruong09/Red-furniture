@@ -38,12 +38,9 @@ header{
     width: 100%;
 }
 header #header{
-    background-size: cover;
     background: url(../img/Background-header-electronics.png) top center/ cover no-repeat;
-    background-position: bottom;
     height: 100vh;
     background-attachment: fixed;
-    
 }
 #header .header_eletronics{
     top: 30px;
@@ -63,6 +60,7 @@ header #header{
     width: 150px;
     height: 100px;
     margin-top: -30px;
+    cursor: pointer;
 }
 .header_eletronics .list_header a{
     font-size: 25px;
